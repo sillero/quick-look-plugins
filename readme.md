@@ -32,13 +32,40 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch 
 Run `brew cask install qlcolorcode` or [download manually](https://qlcolorcode.googlecode.com/files/QLColorCode-2.0.2.tgz)  
 For HTML files (QL renders by default), edit `~/Library/QuickLook/QLColorCode.qlgenerator/Contents/Info.plist` to look like this
 ```
-  <key>LSItemContentTypes</key>
+	<key>LSItemContentTypes</key>
 	<array>
 		...
 		<string>public.html</string>
 		<string>public.xhtml</string>
 	</array>
 ```
+For SASS, LESS, SCSS:  
+1\. edit `~/Library/QuickLook/QLColorCode.qlgenerator/Contents/Info.plist` to look like this
+```
+	<key>LSItemContentTypes</key>
+	<array>
+		...
+		<string>dyn.ah62d4rv4ge81g25xsq</string>
+		<string>dyn.ah62d4rv4ge81g2pxsq</string>
+		<string>dyn.ah62d4rv4ge8023pxsq</string>
+	</array>
+	...
+	<string>CSS File</string>
+	<key>UTTypeIdentifier</key>
+	<string>public.css</string>
+	<key>UTTypeTagSpecification</key>
+	<dict>
+		<key>public.filename-extension</key>
+		<array>
+			<string>css</string>
+			<string>less</string>
+			<string>scss</string>
+			<string>sass</string>
+		</array>
+	</dict>
+```
+2\. edit `~/Library/QuickLook/QLColorCode.qlgenerator/Contents/Resources/etc/highlight/filetypes.conf` and `~/Library/QuickLook/QLColorCode.qlgenerator/Contents/Resources/override/config/filetypes.conf` and add `$ext(css)=less sass scss` to the first block of instructions
+
 ![](screenshots/QLColorCode.png)
 
 
