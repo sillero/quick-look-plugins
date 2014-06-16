@@ -29,8 +29,16 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch 
 
 > Preview source code files with syntax highlighting
 
-Run `brew cask install qlcolorcode` or [download manually](https://qlcolorcode.googlecode.com/files/QLColorCode-2.0.2.tgz)
-
+Run `brew cask install qlcolorcode` or [download manually](https://qlcolorcode.googlecode.com/files/QLColorCode-2.0.2.tgz)  
+For HTML files (QL renders by default), edit `~/Library/QuickLook/QLColorCode.qlgenerator/Contents/Info.plist` to look like this
+```
+  <key>LSItemContentTypes</key>
+	<array>
+		...
+		<string>public.html</string>
+		<string>public.xhtml</string>
+	</array>
+```
 ![](screenshots/QLColorCode.png)
 
 
