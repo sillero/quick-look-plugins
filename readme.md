@@ -55,7 +55,8 @@ Run `brew cask install qlstephen` or [download manually](https://github.com/whom
 
 > Preview Markdown files
 
-Run `brew cask install qlmarkdown` or [download manually](https://github.com/downloads/toland/qlmarkdown/QLMarkdown-1.3.zip)
+Run `brew cask install qlmarkdown` or [download manually](https://github.com/downloads/toland/qlmarkdown/QLMarkdown-1.3.zip)  
+In case you used `brew cask` and the markdown is not rendering, [try this](https://github.com/toland/qlmarkdown/commit/1feec6a32446cb7957e6a193e92d3853e5cd7153)
 
 ![](screenshots/QLMarkdown.png)
 
